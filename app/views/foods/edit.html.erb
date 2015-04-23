@@ -2,8 +2,13 @@
 	<h1>Foods#edit</h1>
 	<%= form_for(:food,:url=>{:action=>'update',:id=>@food.id}) do |f| %>
 		<%= render(:partial=>'shared/foods_new_edit',:locals=>{:f=>f}) %>
-		<%= f.submit("Update Menu") %>
+		<%= f.submit("Update Menu",class:'btn btn-primary margin-top-10') %>
+
+		<%= link_to({:action=>'destroy',:id=>@food.id},class:'btn btn-danger margin-top-10') do %>
+					<span class="glyphicon glyphicon-trash"></span> Delete Food
+				<% end %>
 	<% end %>
+	<span class="glyphicon glyphicon-food"></span>
 </div>
 
 

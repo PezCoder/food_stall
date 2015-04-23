@@ -1,17 +1,25 @@
 <div class="foods index">
-	<h1>Foods#index</h1>
+	<h3>Select a food of your choice (foods#index)</h3>
+	<%= link_to("Create New food Item",{:action=>'new'},class:'new_food btn btn-lg btn-warning') %>
+	<div class="row">
+    <% count = 1 %>
 	<% @foods.each do |food| %>
-		<div class="each_food">
-		<%= link_to("Add food item to menu",{:action=>'new',:id=>food.id}) %>
-			<h3><%= food.name %></h3>
-			<p>Price - Rs.<%= food.price %></p>
-			<p>Available - <%= food.available ? "Yes" : "No" %></p>
-			<%= link_to("Details",:action=>'show',:id=>food.id) %>
-			<%= link_to("Edit",:action=>'edit',:id=>food.id) %>
-			<%= link_to("Destroy",:action=>'destroy',:id=>food.id) %>
-		</div>
-			<hr>
+
+		<div class="col-md-4 each_image panel">
+			<div class="image-container"><%= image_tag "image#{count}.jpg" %></div>	
+			<div class="details">
+				<h4><%= food.name %></h4>
+				<p>Price - Rs.<%= food.price %></p>
+				<p>Available - <%= food.available ? "Yes" : "No" %></p>
+				<p>Delivery Time - <%= food.delivery_time %> hrs </p>
+				<%= link_to("Details",{:action=>'show',:id=>food.id},class:'btn btn-info') %>
+				<%= link_to({:action=>'edit',:id=>food.id},class: 'btn btn-primary') do %>
+					<span class="glyphicon glyphicon-pencil"></span> Edit Food
+				<% end %>
+			</div>
+		</div> 
+		<% count=count+1 %>
 	<% end %>
 
-	
+	</div>
 </div>

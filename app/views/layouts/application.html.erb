@@ -7,7 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
+
+	<!-- NAVIGATIO MENU -->
+	<header>
+		<h1>Food Stall</h1>
+	</header>
+	<nav><ul>
+			<li><a href="/foods/index">Home</a></li>
+			<li><a href="#">Login</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- FLASH MESSAGES -->
 		<div class="flash" id="flash_wrapper">
 				<% if !flash[:notice].blank? %>
 					<div class="notice alert alert-info">
@@ -27,8 +40,15 @@
 					</div>
 				<% end %>
 		</div>
-	</div>
-<%= yield %>
 
+<!-- MAIN CONTENT -->
+<section>
+	<div class="container">
+		<%= yield %>
+	</div>
+</section>
+
+<!-- FOOTER -->
+<footer><p>&copy;Copyrights | Rahul Gupta &amp; Karthik Chandu | All rights Reserved.</p></footer>
 </body>
 </html>
