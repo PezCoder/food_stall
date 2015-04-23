@@ -1,7 +1,6 @@
 class CreateFoods < ActiveRecord::Migration
   def change
     create_table :foods do |t|
-    	t.references :user
     	t.references :vendor
 
     	t.string "name",:limit=>50
@@ -12,7 +11,6 @@ class CreateFoods < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index("foods","user_id")
     add_index("foods","vendor_id")
   end
 end
