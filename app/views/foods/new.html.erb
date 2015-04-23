@@ -1,2 +1,7 @@
-<h1>Foods#new</h1>
-<p>Find me in app/views/foods/new.html.erb</p>
+<div class="foods new">
+	<h1>Foods#new</h1>
+	<%= form_for(:food,:url=>{:action=>'create',:id=>@food.id}) do |f| %>
+		<%= render(:partial=>'shared/foods_new_edit',:locals=>{:f=>f}) %>
+		<%= f.submit("Add food to menu") %>
+	<% end %>
+</div>

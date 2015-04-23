@@ -7,7 +7,7 @@ class CreateFoods < ActiveRecord::Migration
     	t.string "category",:limit=>50
     	t.integer "price"
     	t.boolean "available"
-    	t.datetime "order_date_time"
+    	t.integer "delivery_time"
 
       t.timestamps null: false
     end

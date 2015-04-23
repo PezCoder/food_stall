@@ -1,2 +1,12 @@
-<h1>Foods#show</h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<div class="foods show">
+	<h1>Foods#show</h1>
+	<div class="food_details">
+		<p><%= @food.name %></p>
+		<p>Price - Rs.<%= @food.price %></p>
+		<p>Category - <%= @food.category %></p>
+		<p>Available - <%= @food.available %></p>
+		<p>Delivery Time - <%= @food.delivery_time %></p>
+	</div>
+</div>
+
+

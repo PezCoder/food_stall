@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20150423192242) do
 
   create_table "foods", force: :cascade do |t|
-    t.integer  "vendor_id",       limit: 4
-    t.string   "name",            limit: 50
-    t.string   "category",        limit: 50
-    t.integer  "price",           limit: 4
-    t.boolean  "available",       limit: 1
-    t.datetime "order_date_time"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "vendor_id",     limit: 4
+    t.string   "name",          limit: 50
+    t.string   "category",      limit: 50
+    t.integer  "price",         limit: 4
+    t.boolean  "available",     limit: 1
+    t.integer  "delivery_time", limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   add_index "foods", ["vendor_id"], name: "index_foods_on_vendor_id", using: :btree

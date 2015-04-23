@@ -1,2 +1,17 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<div class="foods index">
+	<h1>Foods#index</h1>
+	<% @foods.each do |food| %>
+		<div class="each_food">
+		<%= link_to("Add food item to menu",{:action=>'new',:id=>food.id}) %>
+			<h3><%= food.name %></h3>
+			<p>Price - Rs.<%= food.price %></p>
+			<p>Available - <%= food.available ? "Yes" : "No" %></p>
+			<%= link_to("Details",:action=>'show',:id=>food.id) %>
+			<%= link_to("Edit",:action=>'edit',:id=>food.id) %>
+			<%= link_to("Destroy",:action=>'destroy',:id=>food.id) %>
+		</div>
+			<hr>
+	<% end %>
+
+	
+</div>
