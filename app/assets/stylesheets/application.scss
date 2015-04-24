@@ -84,17 +84,6 @@ section{
 	top: 0;
 }
 
-form button{
-	height: 35px;
-	border:0;
-	padding: 4px 16px;
-	background:rgb(50,104,205);
-	color:white;
-	border-radius: 3px;
-	transition:all 0.2s ease;
-}
-
-
 button:hover{
 	box-shadow: rgba(0,0,0,0.8) 0 3px 3px;
 }
@@ -166,4 +155,11 @@ section h3{
 		box-shadow: 4px 0px 6px grey;
 	}
 	z-index:1000;
+}
+
+.users.login{
+	form row{
+		padding:0;
+		margin: 0;
+	}
 }

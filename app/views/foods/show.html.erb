@@ -1,12 +1,27 @@
 <div class="foods show">
 	<h1>Foods#show</h1>
-	<div class="food_details">
-		<p><%= @food.name %></p>
-		<p>Price - Rs.<%= @food.price %></p>
-		<p>Category - <%= @food.category %></p>
-		<p>Available - <%= @food.available %></p>
-		<p>Delivery Time - <%= @food.delivery_time %></p>
+	<div class="row">
+		<div class="col-md-4">
+		 	<%= image_tag("image4.jpg",:width=>300) %>
+		</div>
+		<div class="col-md-6">
+			<div class="food_details panel panel-primary">
+				<div class="panel-heading">
+					<h4>Food Details</h4>
+				</div>
+				<div class="panel-body">
+					<p><big><strong><%= @food.name %> - Umm ! It's yummy . </strong></big></p>
+					<p>Price - Rs.<%= @food.price %></p>
+					<p>Category - <%= @food.category %></p>
+					<p>Available - <%= @food.available %></p>
+					<p>Delivery Time - <%= @food.delivery_time %></p>
+					<input type="submit" value="Place Order" class="btn btn-lg btn-warning">
+				</div>
+			</div>
+		</div>
+		
 	</div>
+	
 </div>
 
 

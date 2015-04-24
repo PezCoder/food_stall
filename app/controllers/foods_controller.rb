@@ -1,7 +1,9 @@
 class FoodsController < ApplicationController
   layout "application"
-
+  
+  before_action :check_user_stamp
   before_action :get_variables
+
 
   def index
     @foods = Food.recent
