@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: food_stall
-  password: inferno#
+  password: password
   host: localhost
 
 development:
